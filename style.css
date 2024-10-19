@@ -1,0 +1,120 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .logo > h1 {
+  font-size: 40px;
+  text-shadow: 2px 5px 4px black;
+}
+nav .logo > h1 > span {
+  color: skyblue;
+}
+nav .links > ul {
+  display: flex;
+}
+nav .links > ul > li {
+  list-style: none;
+  margin: 0px 10px;
+  font-size: 25px;
+}
+nav .links > ul > li > a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: skyblue;
+    border-bottom: 2px solid skyblue;
+  }
+}
+.hambarg {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  .hambarg {
+    display: block;
+    cursor: pointer;
+  }
+  .links {
+    display: none;
+  }
+  .logo > h1 {
+    font-size: 20px;
+  }
+}
+.sidebar-links {
+  max-width: 400px;
+  width: 100%;
+  height: 80vh;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+.sidebar-links .upper-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sidebar-links .upper-content .sidebar-logo > h1 {
+  font-size: 30px;
+  text-shadow: 2px 4px 4px black;
+}
+.sidebar-links .upper-content .sidebar-logo > h1 > span {
+  color: skyblue;
+}
+.sidebar-links .links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sidebar-links .links > ul > li {
+  list-style: none;
+  font-size: 25px;
+  margin: 40px 0px;
+}
+.sidebar-links .links > ul > li > a {
+  text-decoration: none;
+  color: rgb(22, 130, 173);
+  &:hover {
+    color: skyblue;
+    border-bottom: 2px solid skyblue;
+  }
+}
+.sidebar-links .social-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sidebar-links .social-links > ul {
+  display: flex;
+  list-style: none;
+}
+.sidebar-links .social-links > ul > li {
+  margin: 0px 7px;
+}
+.sidebar-links .upper-content .cancel-btn button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  outline: none;
+}
+@media (max-width: 991.98px) {
+  .sidebar-links {
+    height: 100vh;
+  }
+}
